@@ -1,4 +1,5 @@
 var correct = 0;
+
 var name = prompt('Hello, what is your name?');
 alert('Hello, ' + name + '.' + '\nPlease answer the following questions with a yes or no.');
 
@@ -86,27 +87,38 @@ if (question3 === answer3) {
 var answer4 = 12;
 var years = '';
 
-// the below is broken. Fix this question and loop.
+years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
 while (years === NaN) {
-  years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
   if (years === NaN) {
    alert("I'm sorry that is not valid input.");
+   years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
  }
 }
 
-if (years === answer4) {
-  alert('That is right ' + name + '! Way to go!');
-  correct += 1;
-} else if (years < 12) {
-  alert('You guessed too low.');
-} else if (years > 12) {
-  alert('You guessed too high.');
+i = 0;
+
+while (i === 0) {
+  if (years < answer4) {
+    alert('You guessed too low.');
+    console.log('User guessed too low.');
+    years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
+  } else if (years > answer4) {
+    alert('You guessed too high.');
+    console.log('User guessed too high.');
+    years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
+  } else if (years === answer4) {
+    alert('That is right ' + name + '! Way to go!');
+    console.log('User guessed correctly.');
+    correct += 1;
+    i = 1;
+  }
 }
 
 
-// alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
-// alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
-// alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
-// alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
 
-// alert('You got ' + correct + ' answers correct.');
+alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
+alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
+alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
+alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
+
+alert('You got ' + correct + ' answers correct.');
