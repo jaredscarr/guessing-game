@@ -113,9 +113,7 @@ while (i === 0) {
     i = 1;
   }
 }
-*/
 
-//question #5
 
 i = 0;
 while (i < 1) {
@@ -141,6 +139,40 @@ if (question5 === answer5) {
 } else {
     alert("I'm sorry " + name + '. Jared actually loves to cook.');
     console.log('the user guessed incorrectly.');
+}
+
+*/
+
+// question 6 working on now
+
+var answer6 = 3;
+years = '';
+
+years = parseInt(prompt('For how many years was Jared an athletic trainer?'));
+while (years === NaN) {
+  if (years === NaN) {
+   alert("I'm sorry that is not valid input.");
+   years = parseInt(prompt('For how many years was Jared an athletic trainer?'));
+ }
+}
+
+i = 0;
+
+while (i === 0) {
+  if (years < answer6) {
+    alert('You guessed too low.');
+    console.log('User guessed too low.');
+    years = parseInt(prompt('For how many years was Jared an athletic trainer??'));
+  } else if (years > answer6) {
+    alert('You guessed too high.');
+    console.log('User guessed too high.');
+    years = parseInt(prompt('For how many years was Jared an athletic trainer??'));
+  } else if (years === answer6) {
+    alert('That is right ' + name + '! Way to go!');
+    console.log('User guessed correctly.');
+    correct += 1;
+    i = 1;
+  }
 }
 
 // alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
