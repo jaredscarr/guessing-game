@@ -1,5 +1,5 @@
 var correct = 0;
-
+/*
 var name = prompt('Hello, what is your name?');
 alert('Hello, ' + name + '.' + '\nPlease answer the following questions with a yes or no.');
 
@@ -113,12 +113,39 @@ while (i === 0) {
     i = 1;
   }
 }
+*/
 
+//question #5
 
+i = 0;
+while (i < 1) {
+  var question5 = prompt('Does Jared enjoy travel?');
+  var answer5 = 'yes';
+  question5 = question5.toLowerCase();
 
-alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
-alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
-alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
-alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
+  if (question5 === 'yes' || question5 === 'y') {
+    question5 = 'yes';
+    i = 2;
+  } else if (question5 === 'no' || question5 === 'n') {
+    question5 = 'no';
+    i = 2;
+  } else {
+      alert("I'm sorry " + name + " that is not a valid input.");
+  }
+}
 
-alert('You got ' + correct + ' answers correct.');
+if (question5 === answer5) {
+  alert("That's right, " + name + '!');
+  console.log ('The user guessed correctly.');
+  correct += 1;
+} else {
+    alert("I'm sorry " + name + '. Jared actually loves to cook.');
+    console.log('the user guessed incorrectly.');
+}
+
+// alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
+// alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
+// alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
+// alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
+
+// alert('You got ' + correct + ' answers correct.');
