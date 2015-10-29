@@ -5,6 +5,7 @@ alert('Hello, ' + name + '.' + '\nPlease answer the following questions with a y
 
 function q1() {
 var i = 0;
+var ans1 = document.getElementById('answer1');
 while (i < 1) {
 
   var question1 = prompt('Does Jared like camping?');
@@ -18,23 +19,24 @@ while (i < 1) {
     question1 = 'no';
     i = 2;
   } else {
-    alert("I'm sorry " + name + " that is not a valid input.");
+    ans1.innerHTML = "I'm sorry " + name + " that is not a valid input.";
     i = 0;
   }
 }
 
 if (question1 === answer1) {
-  alert("That's right, " + name + '!');
+    ans1.innerHTML = "That's right, " + name + '!';
   console.log ('The user guessed correctly.');
   correct += 1;
 } else {
-  alert("I'm sorry " + name + '. He loves camping.');
+  ans1.innerHTML = "I'm sorry " + name + '. He loves camping.';
   console.log('the user guessed incorrectly.');
 }
 }
 
 function q2() {
 i = 0;
+var ans2 = document.getElementById('answer2');
 while (i < 1) {
 
   var question2 = prompt('Does Jared have any pets?');
@@ -48,22 +50,23 @@ while (i < 1) {
     question2 = 'no';
     i = 2;
   } else {
-      alert("I'm sorry " + name + " that is not a valid input.");
+      ans2.innerHTML = "I'm sorry " + name + " that is not a valid input.";
   }
 }
 
 if (question2 === answer2) {
-  alert("That's right, " + name + '!');
+  ans2.innerHTML = "That's right, " + name + '!';
   console.log ('The user guessed correctly.');
   correct += 1;
   } else {
-    alert("I'm sorry " + name + '. Jared does not have any pets yet.');
+    ans2.innerHTML = "I'm sorry " + name + '. Jared does not have any pets yet.';
     console.log('the user guessed incorrectly.');
     }
 }
 
 function  q3 () {
 i = 0;
+ans3 = document.getElementById('answer3');
 while (i < 1) {
   var question3 = prompt('Does Jared enjoy cooking?');
   var answer3 = 'yes';
@@ -76,16 +79,16 @@ while (i < 1) {
     question3 = 'no';
     i = 2;
   } else {
-      alert("I'm sorry " + name + " that is not a valid input.");
+      ans3.innerHTML = "I'm sorry " + name + " that is not a valid input.";
   }
 }
 
 if (question3 === answer3) {
-  alert("That's right, " + name + '!');
+  ans3.innerHTML = "That's right, " + name + '!';
   console.log ('The user guessed correctly.');
   correct += 1;
 } else {
-  alert("I'm sorry " + name + '. Jared actually loves to cook.');
+  ans3.innerHTML = "I'm sorry " + name + '. Jared actually loves to cook.';
   console.log('the user guessed incorrectly.');
 }
 }
@@ -93,6 +96,7 @@ if (question3 === answer3) {
 function q4 () {
 var answer4 = 12;
 var years = '';
+ans4 = document.getElementById('answer4');
 
 //talk to Jonathan about this part. NaN vs isNaN vs other empty string
 years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
@@ -115,7 +119,7 @@ while (i === 0) {
     console.log('User guessed too high.');
     years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
   } else if (years === answer4) {
-    alert('That is right ' + name + '! Way to go!');
+    ans4.innerHTML = 'That is right ' + name + '! Way to go!';
     console.log('User guessed correctly.');
     correct += 1;
     i = 1;
@@ -126,6 +130,7 @@ while (i === 0) {
 
 function q5 () {
 i = 0;
+ans5 = document.getElementById('answer5');
 while (i < 1) {
   var question5 = prompt('Does Jared enjoy travel?');
   var answer5 = 'yes';
@@ -143,11 +148,11 @@ while (i < 1) {
 }
 
 if (question5 === answer5) {
-  alert("That's right, " + name + '!');
+  ans5.innerHTML = "That's right, " + name + '!';
   console.log ('The user guessed correctly.');
   correct += 1;
 } else {
-    alert("I'm sorry " + name + '. Jared tries to travel as often as possible');
+    ans5.innerHTML = "I'm sorry " + name + '. Jared tries to travel as often as possible';
     console.log('the user guessed incorrectly.');
 }
 }
@@ -155,6 +160,7 @@ if (question5 === answer5) {
 function q6 () {
 var answer6 = 3;
 var years2 = '';
+ans6 = document.getElementById('answer6');
 
 years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
 while (years2 === NaN) {
@@ -176,7 +182,7 @@ while (i === 0) {
     console.log('User guessed too high.');
     years2 = parseInt(prompt('For how many years was Jared an athletic trainer??'));
   } else if (years2 === answer6) {
-    alert('That is right ' + name + '! Way to go!');
+    ans6.innerHTML = 'That is right ' + name + '! Way to go!';
     console.log('User guessed correctly.');
     correct += 1;
     i = 1;
@@ -191,10 +197,3 @@ q4();
 q5();
 q6();
 
-alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
-alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
-alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
-alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
-alert('For question 5 you guessed ' + question5 + '. The correct answer was ' + answer5 + '.');
-alert('For question 4 you guessed ' + years2 + '. The correct answer was ' + answer6 + '.');
-alert('You got ' + correct + ' answers correct.');
