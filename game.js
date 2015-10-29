@@ -80,13 +80,14 @@ if (question3 === answer3) {
   console.log ('The user guessed correctly.');
   correct += 1;
 } else {
-    alert("I'm sorry " + name + '. Jared actually loves to cook.');
-    console.log('the user guessed incorrectly.');
+  alert("I'm sorry " + name + '. Jared actually loves to cook.');
+  console.log('the user guessed incorrectly.');
 }
 
 var answer4 = 12;
 var years = '';
 
+//talk to Jonathan about this part. NaN vs isNaN vs other empty string
 years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
 while (years === NaN) {
   if (years === NaN) {
