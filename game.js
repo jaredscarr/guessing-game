@@ -3,6 +3,7 @@ var correct = 0;
 var name = prompt('Hello, what is your name?');
 alert('Hello, ' + name + '.' + '\nPlease answer the following questions with a yes or no.');
 
+function q1() {
 var i = 0;
 while (i < 1) {
 
@@ -30,7 +31,9 @@ if (question1 === answer1) {
   alert("I'm sorry " + name + '. He loves camping.');
   console.log('the user guessed incorrectly.');
 }
+}
 
+function q2() {
 i = 0;
 while (i < 1) {
 
@@ -57,7 +60,9 @@ if (question2 === answer2) {
     alert("I'm sorry " + name + '. Jared does not have any pets yet.');
     console.log('the user guessed incorrectly.');
     }
+}
 
+function  q3 () {
 i = 0;
 while (i < 1) {
   var question3 = prompt('Does Jared enjoy cooking?');
@@ -83,7 +88,9 @@ if (question3 === answer3) {
   alert("I'm sorry " + name + '. Jared actually loves to cook.');
   console.log('the user guessed incorrectly.');
 }
+}
 
+function q4 () {
 var answer4 = 12;
 var years = '';
 
@@ -114,8 +121,10 @@ while (i === 0) {
     i = 1;
   }
 }
+}
 
 
+function q5 () {
 i = 0;
 while (i < 1) {
   var question5 = prompt('Does Jared enjoy travel?');
@@ -141,7 +150,9 @@ if (question5 === answer5) {
     alert("I'm sorry " + name + '. Jared tries to travel as often as possible');
     console.log('the user guessed incorrectly.');
 }
+}
 
+function q6 () {
 var answer6 = 3;
 var years2 = '';
 
@@ -171,6 +182,14 @@ while (i === 0) {
     i = 1;
   }
 }
+}
+
+q1();
+q2();
+q3();
+q4();
+q5();
+q6();
 
 alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
 alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
