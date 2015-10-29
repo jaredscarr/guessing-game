@@ -1,6 +1,9 @@
 # guessing-game
 
-Jared Scarr
+Jared Scarr: Navigator
+Willie Richardson: Driver
+Selena Flannery: Third Wheel
+
 Guessing Game built with HTML, CSS and JavaScript
 
 Asks a series of yes/no questions and numberical questions to the user.
