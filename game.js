@@ -1,5 +1,5 @@
 var correct = 0;
-/*
+
 var name = prompt('Hello, what is your name?');
 alert('Hello, ' + name + '.' + '\nPlease answer the following questions with a yes or no.');
 
@@ -137,20 +137,16 @@ if (question5 === answer5) {
   console.log ('The user guessed correctly.');
   correct += 1;
 } else {
-    alert("I'm sorry " + name + '. Jared actually loves to cook.');
+    alert("I'm sorry " + name + '. Jared tries to travel as often as possible');
     console.log('the user guessed incorrectly.');
 }
 
-*/
-
-// question 6 working on now
-
 var answer6 = 3;
-years = '';
+var years2 = '';
 
-years = parseInt(prompt('For how many years was Jared an athletic trainer?'));
-while (years === NaN) {
-  if (years === NaN) {
+years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
+while (years2 === NaN) {
+  if (years2 === NaN) {
    alert("I'm sorry that is not valid input.");
    years = parseInt(prompt('For how many years was Jared an athletic trainer?'));
  }
@@ -159,15 +155,15 @@ while (years === NaN) {
 i = 0;
 
 while (i === 0) {
-  if (years < answer6) {
+  if (years2 < answer6) {
     alert('You guessed too low.');
     console.log('User guessed too low.');
-    years = parseInt(prompt('For how many years was Jared an athletic trainer??'));
-  } else if (years > answer6) {
+    years2 = parseInt(prompt('For how many years was Jared an athletic trainer??'));
+  } else if (years2 > answer6) {
     alert('You guessed too high.');
     console.log('User guessed too high.');
-    years = parseInt(prompt('For how many years was Jared an athletic trainer??'));
-  } else if (years === answer6) {
+    years2 = parseInt(prompt('For how many years was Jared an athletic trainer??'));
+  } else if (years2 === answer6) {
     alert('That is right ' + name + '! Way to go!');
     console.log('User guessed correctly.');
     correct += 1;
@@ -175,9 +171,10 @@ while (i === 0) {
   }
 }
 
-// alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
-// alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
-// alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
-// alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
-
-// alert('You got ' + correct + ' answers correct.');
+alert('For question 1 you guessed ' + question1 + '. The correct answer was ' + answer1 + '.');
+alert('For question 2 you guessed ' + question2 + '. The correct answer was ' + answer2 + '.');
+alert('For question 3 you guessed ' + question3 + '. The correct answer was ' + answer3 + '.');
+alert('For question 4 you guessed ' + years + '. The correct answer was ' + answer4 + '.');
+alert('For question 5 you guessed ' + question5 + '. The correct answer was ' + answer5 + '.');
+alert('For question 4 you guessed ' + years2 + '. The correct answer was ' + answer6 + '.');
+alert('You got ' + correct + ' answers correct.');
