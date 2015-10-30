@@ -19,7 +19,7 @@ while (i < 1) {
     question1 = 'no';
     i = 2;
   } else {
-    ans1.innerHTML = "I'm sorry " + name + " that is not a valid input.";
+    alert("I'm sorry " + name + " that is not a valid input.");
     i = 0;
   }
 }
@@ -50,7 +50,7 @@ while (i < 1) {
     question2 = 'no';
     i = 2;
   } else {
-      ans2.innerHTML = "I'm sorry " + name + " that is not a valid input.";
+      alert("I'm sorry " + name + " that is not a valid input.");
   }
 }
 
@@ -79,7 +79,7 @@ while (i < 1) {
     question3 = 'no';
     i = 2;
   } else {
-      ans3.innerHTML = "I'm sorry " + name + " that is not a valid input.";
+      alert("I'm sorry " + name + " that is not a valid input.");
   }
 }
 
@@ -95,16 +95,12 @@ if (question3 === answer3) {
 
 function q4 () {
 var answer4 = 12;
-var years = '';
 ans4 = document.getElementById('answer4');
-
-//talk to Jonathan about this part. NaN vs isNaN vs other empty string
-years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
-while (years === NaN) {
-  if (years === NaN) {
+//working on why this worked but not in the Chrome console
+var years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
+while (isNaN(years) === true || years.length < 1) {
    alert("I'm sorry that is not valid input.");
    years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
- }
 }
 
 i = 0;
@@ -159,15 +155,12 @@ if (question5 === answer5) {
 
 function q6 () {
 var answer6 = 3;
-var years2 = '';
 ans6 = document.getElementById('answer6');
 
-years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
-while (years2 === NaN) {
-  if (years2 === NaN) {
+var years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
+while (isNaN(years2) === true || years2.length < 1) {
    alert("I'm sorry that is not valid input.");
-   years = parseInt(prompt('For how many years was Jared an athletic trainer?'));
- }
+   years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
 }
 
 i = 0;
