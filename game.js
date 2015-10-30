@@ -26,16 +26,19 @@ function q1() {
 
   if (question1 === answer1) {
       ans1.innerHTML = "That's right, " + name + '!';
+      ans1.style.color = 'green';
     console.log ('The user guessed correctly.');
+    document.getElementById("img1").style.display = "block";
     correct += 1;
   } else {
     ans1.innerHTML = "I'm sorry " + name + '. He loves camping.';
+    ans1.style.color = 'red';
     console.log('the user guessed incorrectly.');
   }
 }
 
 function q2() {
-  i = 0;
+  var i = 0;
   var ans2 = document.getElementById('answer2');
 
   while (i < 1) {
@@ -57,16 +60,19 @@ function q2() {
   if (question2 === answer2) {
     ans2.innerHTML = "That's right, " + name + '!';
     console.log ('The user guessed correctly.');
+    document.getElementById("img2").style.display = "block";
+    ans2.style.color = 'green';
     correct += 1;
     } else {
       ans2.innerHTML = "I'm sorry " + name + '. Jared does not have any pets yet.';
+      ans2.style.color = 'red';
       console.log('the user guessed incorrectly.');
     }
 }
 
 function q3 () {
-  i = 0;
-  ans3 = document.getElementById('answer3');
+  var i = 0;
+  var ans3 = document.getElementById('answer3');
 
   while (i < 1) {
     var question3 = prompt('Does Jared enjoy cooking?');
@@ -86,25 +92,29 @@ function q3 () {
 
   if (question3 === answer3) {
     ans3.innerHTML = "That's right, " + name + '!';
+    ans3.style.color = 'green';
     console.log ('The user guessed correctly.');
+    document.getElementById("img3").style.display = "block";
     correct += 1;
   } else {
     ans3.innerHTML = "I'm sorry " + name + '. Jared actually loves to cook.';
+    ans3.style.color = 'red';
     console.log('the user guessed incorrectly.');
   }
 }
 
 function q4 () {
-  ans4 = document.getElementById('answer4');
+  var answer4 = 12;
   //working on why this worked but not in the Chrome console
   var years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
+  var ans4 = document.getElementById('answer4');
 
   while (isNaN(years) === true || years.length < 1) {
      alert("I'm sorry that is not valid input.");
      years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
   }
 
-  i = 0;
+  var i = 0;
 
   while (i === 0) {
     if (years < answer4) {
@@ -117,7 +127,9 @@ function q4 () {
       years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
     } else if (years === answer4) {
       ans4.innerHTML = 'That is right ' + name + '! Way to go!';
+      ans4.style.color = 'green';
       console.log('User guessed correctly.');
+      document.getElementById("img4").style.display = "block";
       correct += 1;
       i = 1;
     }
@@ -126,8 +138,9 @@ function q4 () {
 
 
 function q5 () {
-  i = 0;
-  ans5 = document.getElementById('answer5');
+  var i = 0;
+  var ans5 = document.getElementById('answer5');
+
   while (i < 1) {
     var question5 = prompt('Does Jared enjoy travel?');
     var answer5 = 'yes';
@@ -146,17 +159,20 @@ function q5 () {
 
   if (question5 === answer5) {
     ans5.innerHTML = "That's right, " + name + '!';
+    ans5.style.color = 'green';
     console.log ('The user guessed correctly.');
+    document.getElementById("img5").style.display = "block";
     correct += 1;
   } else {
       ans5.innerHTML = "I'm sorry " + name + '. Jared tries to travel as often as possible';
+      ans5.style.color = 'red';
       console.log('the user guessed incorrectly.');
   }
 }
 
 function q6 () {
   var answer6 = 3;
-  ans6 = document.getElementById('answer6');
+  var ans6 = document.getElementById('answer6');
 
   var years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
   while (isNaN(years2) === true || years2.length < 1) {
@@ -164,7 +180,7 @@ function q6 () {
      years2 = parseInt(prompt('For how many years was Jared an athletic trainer?'));
   }
 
-  i = 0;
+  var i = 0;
 
   while (i === 0) {
     if (years2 < answer6) {
@@ -177,7 +193,9 @@ function q6 () {
       years2 = parseInt(prompt('For how many years was Jared an athletic trainer??'));
     } else if (years2 === answer6) {
       ans6.innerHTML = 'That is right ' + name + '! Way to go!';
+      ans6.style.color = 'green';
       console.log('User guessed correctly.');
+      document.getElementById("img6").style.display = "block";
       correct += 1;
       i = 1;
     }
