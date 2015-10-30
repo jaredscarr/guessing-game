@@ -26,11 +26,13 @@ function q1() {
 
   if (question1 === answer1) {
       ans1.innerHTML = "That's right, " + name + '!';
+      ans1.style.color = 'green';
     console.log ('The user guessed correctly.');
     document.getElementById("img1").style.display = "block";
     correct += 1;
   } else {
     ans1.innerHTML = "I'm sorry " + name + '. He loves camping.';
+    ans1.style.color = 'red';
     console.log('the user guessed incorrectly.');
   }
 }
@@ -59,9 +61,11 @@ function q2() {
     ans2.innerHTML = "That's right, " + name + '!';
     console.log ('The user guessed correctly.');
     document.getElementById("img2").style.display = "block";
+    ans2.style.color = 'green';
     correct += 1;
     } else {
       ans2.innerHTML = "I'm sorry " + name + '. Jared does not have any pets yet.';
+      ans2.style.color = 'red';
       console.log('the user guessed incorrectly.');
     }
 }
@@ -88,11 +92,13 @@ function q3 () {
 
   if (question3 === answer3) {
     ans3.innerHTML = "That's right, " + name + '!';
+    ans3.style.color = 'green';
     console.log ('The user guessed correctly.');
     document.getElementById("img3").style.display = "block";
     correct += 1;
   } else {
     ans3.innerHTML = "I'm sorry " + name + '. Jared actually loves to cook.';
+    ans3.style.color = 'red';
     console.log('the user guessed incorrectly.');
   }
 }
@@ -121,6 +127,7 @@ function q4 () {
       years = parseInt(prompt('How many years did Jared spend in the hospitality industry?'));
     } else if (years === answer4) {
       ans4.innerHTML = 'That is right ' + name + '! Way to go!';
+      ans4.style.color = 'green';
       console.log('User guessed correctly.');
       document.getElementById("img4").style.display = "block";
       correct += 1;
@@ -152,11 +159,13 @@ function q5 () {
 
   if (question5 === answer5) {
     ans5.innerHTML = "That's right, " + name + '!';
+    ans5.style.color = 'green';
     console.log ('The user guessed correctly.');
     document.getElementById("img5").style.display = "block";
     correct += 1;
   } else {
       ans5.innerHTML = "I'm sorry " + name + '. Jared tries to travel as often as possible';
+      ans5.style.color = 'red';
       console.log('the user guessed incorrectly.');
   }
 }
@@ -184,6 +193,7 @@ function q6 () {
       years2 = parseInt(prompt('For how many years was Jared an athletic trainer??'));
     } else if (years2 === answer6) {
       ans6.innerHTML = 'That is right ' + name + '! Way to go!';
+      ans6.style.color = 'green';
       console.log('User guessed correctly.');
       document.getElementById("img6").style.display = "block";
       correct += 1;
